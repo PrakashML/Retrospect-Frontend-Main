@@ -53,6 +53,10 @@ class RetrospectService {
       return axios.post("http://localhost:8080/change", change);
   }
 
+  userJoinRoom(data){
+    return axios.post("http://localhost:8080/userJoinRoom", data);
+  }
+
   checkRoomAccessByEmail(data) {
     return axios.post("http://localhost:8080/rooms/check-access", data);
   }

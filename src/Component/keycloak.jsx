@@ -14,6 +14,7 @@ export default class KeycloakService {
     KeycloakService.auth = { loggedIn: false };
 
     return new Promise((resolve, reject) => {
+      console.log("Keycloak configuration:", keycloakAuth);
       keycloakAuth.init({ onLoad: 'login-required', checkLoginIframe: false, flow: 'standard' })
         .then(authenticated => {
           if (authenticated) {
